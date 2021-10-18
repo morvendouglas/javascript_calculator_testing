@@ -81,13 +81,13 @@ function App() {
   }
 
   const divide = (number) => {
+    if ( number != 0 ){
     setRunningTotal(parseFloat(previousTotal) / parseFloat(number));
-    // if (parseFloat(number) === 0){
-    //   setRunningTotal = "Cant divide by zero"
-    // }
+    } else {
+      setRunningTotal("error")
+    }
   }
-
-
+  
   return (
     <div className="container">
     <div className="calculator">
